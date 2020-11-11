@@ -9,5 +9,46 @@
 </head>
 <body>
     
+    <!-- Site Header -->
+    <header class="site-header site-header--open">
+        <div class="container site-header__container">
+            <a class="logo" href="index.html">
+                <img class="logo__img" src="img/myteam-logo.svg" alt="My team logo" width="160" height="40">
+            </a>
+            
+            <div class="site-header__inner">
+                <nav class="sitenav">
+                    <ul class="sitenav__list">
+                        <li class="sitenav__item">
+                            <a class="sitenav__link" href="">Home</a>
+                        </li>
+                        
+                        <li class="sitenav__item">
+                            <a class="sitenav__link" href="">About Us</a>
+                        </li>
+                    </ul>
+                    
+                    <a class="button button--primary sitenav__button" href="">Contact Us</a>
+                </nav>
+            </div> <!-- site-header__inner -->
+            
+            <button class="site-header__toggle" type="button"></button>
+        </div> <!-- container site-header__container -->
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+    </main>
+    
+    <script> 
+        var elModalToggler = document.querySelector('.site-header__toggle');
+        var elModal = document.querySelector('.site-header');
+        var elModalClose = document.querySelector('.site-header--open');
+        
+        elModalToggler.addEventListener('click', function () {
+            elModal.classList.toggle('site-header--open');
+        });
+    </script>
 </body>
 </html>

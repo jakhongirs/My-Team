@@ -1,0 +1,32 @@
+.logo{
+    display: block;
+    margin-right: 80px;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
+    
+    &:hover{
+        opacity: 0.8;
+    }
+    
+    &:active{
+        opacity: 0.6;
+    }
+}
+
+.logo__img{
+    display: block;
+    width: 160px;
+    height: 40px;
+}
+
+@media only screen and (max-width: 768px){
+    .site-header--open .logo{
+        position: relative;
+        z-index: -2;
+    }
+
+    .logo__img{
+        width: 128px;
+        height: 32px;
+    }
+}

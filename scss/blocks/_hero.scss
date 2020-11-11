@@ -1,0 +1,117 @@
+.hero{
+    background-image: url("../img/hero-bg-left.svg"),
+    url("../img/hero-bg-right.svg");
+    background-repeat: no-repeat no-repeat;
+    background-size: contain contain;
+    background-position: right calc(50% + 850px) top 129px, left calc(50% + 400px) bottom -100px;
+}
+
+.hero__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 129px;
+    padding-bottom: 250px;
+}
+
+.hero__heading{
+    margin: 0;
+    max-width: 620px;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 100px;
+}
+
+.hero__heading-highlight{
+    display: inline-flex;
+    color: $light-red-color;
+}
+
+.hero__text{
+    margin: 0;
+    max-width: 445px;
+    padding-top: 80px;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 10px;
+    
+    &::before{
+        content: "";
+        width: 50px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        background-color: #79C8C7;
+    }
+}
+
+
+@media only screen and (max-width: 1020px){
+    .hero__heading{
+        font-size: 90px;
+        line-height: 100px;
+    }
+    
+    .hero__text{
+        line-height: 26px;
+    }
+}
+
+@media only screen and (max-width: 980px){
+    .hero__container{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 112px;
+        padding-bottom: 256px;
+    }
+    
+    .hero__heading {
+        font-size: 64px;
+        line-height: 56px;
+        text-align: center;
+        margin-bottom: 24px;
+        max-width: 395px;
+    }
+    
+    .hero__text {
+        max-width: 457px;
+        font-size: 15px;
+        line-height: 28px;
+        text-align: center;
+        padding-top: 0px;
+        
+        &::before{
+            display: none;
+        }
+    }
+    
+    .hero{
+        background-image: none,
+        url("../img/hero-bg-right.svg");
+        background-position: left calc(50%) bottom -100px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .hero__container{
+        padding-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .hero__heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 18px;
+        max-width: 248px;
+    }
+    
+    .hero__text {
+        font-size: 15px;
+        line-height: 28px;
+    }
+}

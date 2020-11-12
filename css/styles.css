@@ -423,6 +423,7 @@ img {
   text-decoration: none;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
 }
 
 .button--primary {
@@ -457,6 +458,25 @@ img {
 }
 
 .button--secondary:disabled {
+  opacity: 0.6;
+}
+
+.button--primary-black {
+  border: 2px solid #012F34;
+  color: #012F34;
+}
+
+.button--primary-black:hover {
+  background: #012F34;
+  border: 2px solid #012F34;
+  color: white;
+}
+
+.button--primary-black:active {
+  opacity: 0.8;
+}
+
+.button--primary-black:disabled {
   opacity: 0.6;
 }
 
@@ -1132,6 +1152,76 @@ img {
 @media only screen and (max-width: 580px) {
   .reviews__container {
     padding: 140px 24px 164px;
+  }
+}
+
+.cta {
+  background-color: #F67E7E;
+  background-image: url("../img/cta-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right calc(50% + 750px) bottom -100px;
+}
+
+.cta__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 957px;
+  padding-top: 76px;
+  padding-bottom: 76px;
+}
+
+.cta__heading {
+  margin: 0;
+  font-size: 48px;
+  line-height: 48px;
+  color: #012F34;
+}
+
+@media only screen and (max-width: 1520px) {
+  .cta {
+    background-position: left bottom -80px;
+  }
+}
+
+@media only screen and (max-width: 1305px) {
+  .cta {
+    background-position: left bottom -120px;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .cta__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cta__heading {
+    margin-right: 84px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media only screen and (max-width: 656px) {
+  .cta__container {
+    padding: 83px 24px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cta__heading {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=styles.css.map */
